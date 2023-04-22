@@ -1,25 +1,17 @@
-import logo from './logo.svg';
+import Profile from './Components/Profile';
+import Login from './Components/Login';
 import './App.css';
+import './Components/index.css'
+//import authActions from './action/authActions';
+//import App from 'App';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {window.location.pathname === '/profile' ? <Profile /> : <Login />}
     </div>
   );
 }
+
 
 export default App;
